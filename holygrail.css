@@ -1,55 +1,72 @@
-body{
-  min-height:100vh;
+body {
+  min-height: 100vh;
 }
-main{
+
+main {
   /* display: */
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
 }
-.content{
+
+.content {
   /* flex-grow: */
+  flex-grow: 1;
 }
-aside{
+
+aside {
   /* order: */
+  order: 10;
 }
 
-main>*{
-  background-color:#eee;
-  margin:10px;
-}
-main>*:not(:nth-child(1)){
-  margin-left:0px;
-}
-header, footer{
-  background-color:#ccc;
+main>* {
+  background-color: #eee;
+  margin: 10px;
 }
 
-nav, aside{
-  min-width:160px;
-  max-width:160px;
+main>*:not(:nth-child(1)) {
+  margin-left: 0px;
 }
 
-@media screen and (max-width: 620px){
-  main{
+header, footer {
+  background-color: #ccc;
+}
+
+nav, aside {
+  min-width: 160px;
+  max-width: 160px;
+}
+
+@media screen and (max-width: 620px) {
+  main {
     /* flex-direction: */
+    display: flex;
+    flex-direction: column;
   }
-  main>*:not(:nth-child(1)){
-    margin-left:10px;
-    margin-top:0px;
+  main>*:not(:nth-child(1)) {
+    margin-left: 10px;
+    margin-top: 0px;
   }
-  nav{
+  nav {
     /* order: */
+    order: 2;
+    flex-grow: 1;
   }
-  aside{
+  aside {
     /* order: */
+    order: 3;
+    flex-grow: 1;
   }
-  nav ul{
-    text-align:center;
+  nav ul {
+    text-align: center;
   }
-  nav figure img{
-    width:100px;
-    float:left;
+  nav figure img {
+    width: 100px;
+    float: left;
   }
-  nav, aside{
-    min-width:none;
-    max-width:none;
+  nav, aside {
+    min-width: none;
+    max-width: none;
   }
 }
